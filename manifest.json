@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Tidder",
+  "version": "1.0",
+  "description": "Adjusts the direction of Reddit posts/comments containing mixed Arabic and English words.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "reddit.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+
+    }
+  ]
+  ,
+  "icons": {
+    "48": "reddit.png"
+  }
+}
